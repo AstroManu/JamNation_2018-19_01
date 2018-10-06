@@ -17,6 +17,7 @@ public class AutoMove : MonoBehaviour {
     void Awake() {
         origin = transform.localPosition;
         CurrentPos = origin;
+        WhereToGo += origin;
     }
 
     void Update() {
