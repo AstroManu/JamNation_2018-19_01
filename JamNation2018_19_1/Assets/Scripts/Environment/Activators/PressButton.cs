@@ -5,14 +5,14 @@ using UnityEngine;
 public class PressButton : ActivatorIN {
 
     public float Sensibility;
-
-
+    
     private Vector3 basePos;
     private bool trigger = true;
 
 
     void Awake() {
         basePos = transform.localPosition;
+        
     }
 
     void Update() {
