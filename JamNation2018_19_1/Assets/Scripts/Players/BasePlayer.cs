@@ -13,7 +13,8 @@ public class BasePlayer : MonoBehaviour {
 
 	private Rigidbody rb;
 
-	public float laterialForce = 10f;
+	public float lateralForce = 10f;
+	public float airLateralForce = 5f;
 	public float maxLateralVelocity = 5;
 	public float jumpImpulse = 10f;
 	public float gravityAcceleration = 5f;
@@ -27,7 +28,7 @@ public class BasePlayer : MonoBehaviour {
 	
 	private void FixedUpdate ()
 	{
-		bool groundCheck = groundCheckZone.GetHits(LayerMask.GetMask("Ground")).Length > 0;
+		bool groundCheck = groundCheckZone.GetHits(LayerMask.GetMask("Ground", "Player")).Length > 0;
 
 		ApplyLateralInput(groundCheck);
 
@@ -41,7 +42,9 @@ public class BasePlayer : MonoBehaviour {
 
 	protected virtual void ApplyLateralInput(bool groundCheck)
 	{
-		rb.AddForce(new Vector3(player.GetAxis("MoveHorizontal") * laterialForce, 0f, 0f));
+		float moveForce = groundCheck ? lateralForce : airLateralForce;
+	
+		rb.AddForce(new Vector3(player.GetAxis("MoveHorizontal") * moveForce, 0f, 0f));
 
 		rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -maxLateralVelocity, maxLateralVelocity), rb.velocity.y, rb.velocity.z);
 	}
@@ -57,7 +60,7 @@ public class BasePlayer : MonoBehaviour {
 
 	protected virtual void ApplyGravityAcceleration()
 	{
-		if (rb.velocity.y < 0.1f)
+		if (rb.velocity.y < -0.1f)
 		{
 			rb.AddForce(0f, -gravityAcceleration, 0f);
 		}
