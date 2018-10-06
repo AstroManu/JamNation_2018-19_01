@@ -29,7 +29,10 @@ public class OpenDoor : ActivatorOUT {
 
             if (pivot.transform.localEulerAngles.y < -89 || pivot.transform.localEulerAngles.y > 89) {
                 Activ = false;
-                //Debug.Log("Door opened");
+
+                foreach( Collider col in gameObject.transform.GetComponentsInChildren<Collider>()){
+                    col.isTrigger = true;
+                }
             }
         }
 
