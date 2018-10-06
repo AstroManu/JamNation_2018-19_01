@@ -12,9 +12,8 @@ public class CamTriggerLeft : MonoBehaviour {
 	}
 
     private void OnTriggerStay(Collider other) {
-        Debug.Log("TriggeredLeft");
-
-        Cam.MoveLeft();
+        if (other.GetComponent<BasePlayer>())
+            Cam.MoveLeft();
     }
 
         // Update is called once per frame
