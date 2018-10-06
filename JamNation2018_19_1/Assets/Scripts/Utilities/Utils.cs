@@ -89,6 +89,8 @@ public class Utils {
 
     }
 
+   
+
     #region Tuples
     /// <summary>
     /// Tuple a way to fit values
@@ -146,4 +148,10 @@ public class Utils {
     #endregion
 
 
+}
+
+public static class Extensions {
+    public static bool Near(this float a, float value, float epsilon = .1f) {
+        return (a > value - epsilon && a < value + epsilon);
+    }
 }

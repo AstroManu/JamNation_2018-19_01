@@ -25,7 +25,7 @@ public class GV {
 
 
     // GLOBAL VARIABLES
-    public enum SCENENAMES { DUMMY, MenuScene, MainScene}
+    public enum SCENENAMES { DUMMY, MainScene, Puzzle1, Puzzle2, Puzzle3, Puzzle4, Puzzle5, Puzzle6, Puzzle7, Puzzle8, Puzzle9}
    
 
 }
