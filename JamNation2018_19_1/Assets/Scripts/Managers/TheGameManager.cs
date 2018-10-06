@@ -24,6 +24,7 @@ public class TheGameManager {
     public int WinnedPuzzle { get; private set; }
     public int CurrentPuzzle { get; private set; }
 
+
     public void Init() {
         WinnedPuzzle = 0;
         CurrentPuzzle = 0;
@@ -33,24 +34,30 @@ public class TheGameManager {
 
     }
 
+    public void LaunchGame() {
+        TimerManager.Instance.InGame = true;
+        InPuzzle = false;
+
+    }
 
     public void EndCurrentPuzzle(bool win) {
         if (win) WinnedPuzzle++;
         InPuzzle = false;
 
         //TODO End transition
-        
+
+        SceneManager.Instance.LoadScene("MainScene");
+
     }
+
+
 
     public void BeginNextPuzzle() {
         CurrentPuzzle++;
 
-
-
+        
         //TODO Begin puzzle Transition
-
-
-
+        
         switch (CurrentPuzzle) {
             case 1:
                 SceneManager.Instance.LoadScene("Puzzle1");
@@ -80,6 +87,7 @@ public class TheGameManager {
                 SceneManager.Instance.LoadScene("Puzzle9");
                 break;
             default:
+                Debug.LogError("Unnable to load next Puzzle");
                 break;
         }
 
