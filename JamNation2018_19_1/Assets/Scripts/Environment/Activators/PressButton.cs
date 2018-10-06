@@ -20,7 +20,7 @@ public class PressButton : ActivatorIN {
             if (basePos.y - Sensibility > transform.localPosition.y ) {
                 trigger = false;
                 Activate();
-                Debug.Log("Pushed");
+                //Debug.Log("Pushed");
             }
         }
     }
