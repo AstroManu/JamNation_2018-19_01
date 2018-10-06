@@ -37,6 +37,7 @@ public class MenuManager {
     
     private void Start() {
         Canvas.SetActive(false);
+        TheGameManager.Instance.LaunchGame();
     }
     private void Patch() {}
     private void Quit() {
