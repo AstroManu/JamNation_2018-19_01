@@ -26,14 +26,19 @@ public class FlowManager {
 
     public void InitializeFlowManager(GV.SCENENAMES _scene) {
         TimerManager.Instance.Init();
+        TheGameManager.Instance.Init();
+
 
         currentScene = _scene;
         currentFlow = CreateFlow(_scene);
     }
 
     public void Update(float _dt) {
+        if (currentFlow != null && flowInitialized)
+            currentFlow.UpdateFlow(_dt);
+
         TimerManager.Instance.Update(_dt);
-        
+        TheGameManager.Instance.Update();
     }
 
     public void FixedUpdate(float _dt) {
