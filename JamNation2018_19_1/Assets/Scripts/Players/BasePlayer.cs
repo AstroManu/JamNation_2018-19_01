@@ -6,13 +6,13 @@ using Rewired;
 public class BasePlayer : MonoBehaviour {
 
 	public string rewiredPlayer;
-	private Player player;
+	protected Player player;
 
-	private TriggerArea triggerArea;
-	private TriggerZone groundCheckZone;
+	protected TriggerArea triggerArea;
+	protected TriggerZone groundCheckZone;
 
-	private Rigidbody rb;
-	private Transform modelPivot;
+	protected Rigidbody rb;
+	protected Transform modelPivot;
 
 	public float lateralForce = 10f;
 	public float airLateralForce = 5f;
@@ -20,9 +20,17 @@ public class BasePlayer : MonoBehaviour {
 	public float jumpImpulse = 10f;
 	public float gravityAcceleration = 5f;
 
-	private Quaternion targetRotation;
+	public LayerMask groundCheckMask;
+
+	protected Quaternion targetRotation;
 
 	private void Start ()
+	{
+		Init();
+	}
+	
+	
+	protected virtual void Init ()
 	{
 		player = ReInput.players.GetPlayer(rewiredPlayer);
 		triggerArea = GetComponent<TriggerArea>();
@@ -32,10 +40,10 @@ public class BasePlayer : MonoBehaviour {
 
 		targetRotation = modelPivot.rotation;
 	}
-	
+
 	private void FixedUpdate ()
 	{
-		bool groundCheck = groundCheckZone.GetHits(LayerMask.GetMask("Ground", "Player")).Length > 0;
+		bool groundCheck = groundCheckZone.GetHits(groundCheckMask).Length > 0;
 
 		ApplyLateralInput(groundCheck);
 
