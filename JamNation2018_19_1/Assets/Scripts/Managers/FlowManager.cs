@@ -51,11 +51,35 @@ public class FlowManager {
         Flow flow;
 
         switch (_flow) {
-            case GV.SCENENAMES.MenuScene:
-                flow = new MenuFlow();
-                break;
             case GV.SCENENAMES.MainScene:
                 flow = new MainFlow();
+                break;
+            case GV.SCENENAMES.Puzzle1:
+                flow = new Puzzle1();
+                break;
+            case GV.SCENENAMES.Puzzle2:
+                flow = new Puzzle2();
+                break;
+            case GV.SCENENAMES.Puzzle3:
+                flow = new Puzzle3();
+                break;
+            case GV.SCENENAMES.Puzzle4:
+                flow = new Puzzle4();
+                break;
+            case GV.SCENENAMES.Puzzle5:
+                flow = new Puzzle5();
+                break;
+            case GV.SCENENAMES.Puzzle6:
+                flow = new Puzzle6();
+                break;
+            case GV.SCENENAMES.Puzzle7:
+                flow = new Puzzle7();
+                break;
+            case GV.SCENENAMES.Puzzle8:
+                flow = new Puzzle8();
+                break;
+            case GV.SCENENAMES.Puzzle9:
+                flow = new Puzzle9();
                 break;
             default:
                 flow = null;
