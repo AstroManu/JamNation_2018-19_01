@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cf87ff401764b42b3e43682d96c653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhereToGo: {x: 0, y: 0, z: 0}
+  WhereToGo: {x: 0, y: 5, z: 0}
   TimeToGo: 3
   isActivate: 0
 --- !u!65 &956186009

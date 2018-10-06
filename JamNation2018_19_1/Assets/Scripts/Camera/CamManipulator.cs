@@ -24,7 +24,7 @@ public class CamManipulator : MonoBehaviour {
         Vector3 origin = transform.position;
 
         if (MoveRightT ^ MoveLeftT) {
-            if (MoveLeftT) {
+            if (MoveLeftT && transform.position.x > 0) {
                 Speed -= dt * SpeedAcceleration;
             }
             if (MoveRightT) {
