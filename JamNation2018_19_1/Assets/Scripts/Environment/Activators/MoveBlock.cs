@@ -22,10 +22,12 @@ public class MoveBlock : ActivatorOUT {
     void Start () {
         origin = transform.localPosition;
         CurrentPos = origin;
+        WhereToGo += origin;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if (isActivate) {
             CurrentPos = transform.localPosition;
 
