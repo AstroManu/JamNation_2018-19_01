@@ -22,10 +22,11 @@ public class TheGameManager {
 
     public bool InPuzzle { get; private set;}
     public int WinnedPuzzle { get; private set; }
-
+    public int CurrentPuzzle { get; private set; }
 
     public void Init() {
         WinnedPuzzle = 0;
+        CurrentPuzzle = 0;
     }
 
     public void Update() {
@@ -37,9 +38,51 @@ public class TheGameManager {
         if (win) WinnedPuzzle++;
         InPuzzle = false;
 
-        //TODO Launch transition
+        //TODO End transition
+        
     }
 
+    public void BeginNextPuzzle() {
+        CurrentPuzzle++;
 
+
+
+        //TODO Begin puzzle Transition
+
+
+
+        switch (CurrentPuzzle) {
+            case 1:
+                SceneManager.Instance.LoadScene("Puzzle1");
+                break;
+            case 2:
+                SceneManager.Instance.LoadScene("Puzzle2");
+                break;
+            case 3:
+                SceneManager.Instance.LoadScene("Puzzle3");
+                break;
+            case 4:
+                SceneManager.Instance.LoadScene("Puzzle4");
+                break;
+            case 5:
+                SceneManager.Instance.LoadScene("Puzzle5");
+                break;
+            case 6:
+                SceneManager.Instance.LoadScene("Puzzle6");
+                break;
+            case 7:
+                SceneManager.Instance.LoadScene("Puzzle7");
+                break;
+            case 8:
+                SceneManager.Instance.LoadScene("Puzzle8");
+                break;
+            case 9:
+                SceneManager.Instance.LoadScene("Puzzle9");
+                break;
+            default:
+                break;
+        }
+
+    }
 
 }
