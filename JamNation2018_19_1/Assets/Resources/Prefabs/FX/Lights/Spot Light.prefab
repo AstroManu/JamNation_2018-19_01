@@ -81,7 +81,7 @@ Light:
   m_ShadowAngle: 0
 --- !u!114 &114321488752279146
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1985159516296330}
@@ -118,7 +118,7 @@ MonoBehaviour:
   displayAreaLightEmissiveMesh: 0
 --- !u!114 &114785889367315414
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1985159516296330}
