@@ -3163,6 +3163,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 137553237581748058, guid: c3501d9663fe3eb4ab686a145dbcc618,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc9fdbb215bb58c4da13ffa095e88ef4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3501d9663fe3eb4ab686a145dbcc618, type: 2}
   m_IsPrefabAsset: 0
@@ -5287,6 +5292,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 137238413876270302, guid: b00efb9a0f5b8a14282e4fd7b649c42f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 584c544758f7b29458167c67098d06cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b00efb9a0f5b8a14282e4fd7b649c42f, type: 2}
   m_IsPrefabAsset: 0
