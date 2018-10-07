@@ -12,8 +12,6 @@ public class CamTriggerRight : MonoBehaviour {
     }
 
     private void OnTriggerStay(Collider other) {
-        Debug.Log("TriggeredRight");
-
         if(other.GetComponent<BasePlayer>())
             Cam.MoveRight();
     }

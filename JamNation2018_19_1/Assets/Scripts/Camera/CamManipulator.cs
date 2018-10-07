@@ -11,6 +11,7 @@ public class CamManipulator : MonoBehaviour {
     private float Speed = 0f;
     public float SpeedAcceleration = 2f;
     public float SpeedDeceleration = 5f;
+    public float MaxPosX = 20f;
 
     // Use this for initialization
     void Start () {
@@ -24,11 +25,19 @@ public class CamManipulator : MonoBehaviour {
         Vector3 origin = transform.position;
 
         if (MoveRightT ^ MoveLeftT) {
-            if (MoveLeftT) {
+            if (MoveLeftT && transform.position.x > 0) {
                 Speed -= dt * SpeedAcceleration;
             }
-            if (MoveRightT) {
+            else if (transform.position.x < 0) {
+                Speed = 0;
+                origin.x = 0;
+            }
+            if (MoveRightT && transform.position.x < MaxPosX) {
                 Speed += dt * SpeedAcceleration;
+            }
+            else if (transform.position.x > MaxPosX) {
+                Speed = 0;
+                origin.x = MaxPosX;
             }
         }
         else {
