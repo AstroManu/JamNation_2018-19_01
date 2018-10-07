@@ -1653,8 +1653,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871583220603920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0.3}
-  m_LocalScale: {x: 1, y: 0.57, z: -0.30000004}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0.23}
+  m_LocalScale: {x: 0.24, y: 0.57, z: 0.06}
   m_Children: []
   m_Father: {fileID: 4234914003093282}
   m_RootOrder: 1
@@ -1721,7 +1721,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118470900284372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.5, y: -0.13406515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4234914003093282}
@@ -1778,11 +1778,11 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118470900284372}
-  m_Material: {fileID: 13400000, guid: 79e182ced905f484a90f31c7894cf0e9, type: 2}
+  m_Material: {fileID: 13400000, guid: 7885f1b78d09946f79663ed2fdd3b55d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.31, y: 0.27, z: 1}
+  m_Size: {x: 0.4, y: 0.27, z: 1}
   m_Center: {x: -0.03, y: 0.86, z: 0}
 --- !u!95 &95287169821112852
 Animator:
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   lateralForce: 12
   airLateralForce: 12
   maxLateralVelocity: 3
-  jumpImpulse: 3.8
+  jumpImpulse: 4
   gravityAcceleration: 4
   maxVerticalVelocity: 2
   upwardDampeningDelta: 0.2
@@ -1857,10 +1857,10 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118470900284372}
-  m_Material: {fileID: 13400000, guid: 79e182ced905f484a90f31c7894cf0e9, type: 2}
+  m_Material: {fileID: 13400000, guid: 7885f1b78d09946f79663ed2fdd3b55d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.14
+  m_Radius: 0.2
   m_Height: 0.97
   m_Direction: 1
   m_Center: {x: -0.03, y: 0.48, z: 0}
