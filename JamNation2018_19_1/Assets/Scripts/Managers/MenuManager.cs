@@ -26,6 +26,8 @@ public class MenuManager {
     private bool GoVisible = false;
     private Player Player1;
     private Player Player2;
+    private bool GoFlash = false;
+    private Image flasher;
 
     public GameObject Player;
 
@@ -38,10 +40,24 @@ public class MenuManager {
         Player2 = ReInput.players.GetPlayer("Player2");
 
         Player = GameObject.Find("DefaultPlayer");
+        GoFlash = false;
+        flasher = GameObject.Find("Flash").GetComponent<Image>();
+        flasher.color = new Color(1, 1, 1, 0);
     }
 
     public void Update() {
         float dt = Time.deltaTime;
+
+        if (GoFlash) {
+            Color col = flasher.color;
+            col.a += dt * 6;
+            flasher.color = col;
+
+            if (col.a.Near(1)) {
+                GoFlash = false;
+            }
+        }
+
 
         if (GoInvisible) {
 
@@ -81,6 +97,13 @@ public class MenuManager {
         }
     }
 
+    public void BeginTrans() {
+        GameLaunched = false;
+        Canvas.SetActive(true);
+        GoFlash = true;
+
+    }
+
     private void Pause() {
         TheGameManager.Instance.PauseGame();
         GoVisible = true;
@@ -96,7 +119,7 @@ public class MenuManager {
     private void Start() {
         TheGameManager.Instance.LaunchGame();
     }
-    private void Patch() {}
+
     private void Quit() {
         Application.Quit();
     }
