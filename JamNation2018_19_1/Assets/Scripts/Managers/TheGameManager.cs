@@ -25,12 +25,16 @@ public class TheGameManager {
     public int WinnedPuzzle { get; private set; }
     public int CurrentPuzzle { get; private set; }
 
-   
+    private Timer NextPzlTimer;
+    private Timer EndPzlTimer;
+
+    private Vector3 Respawn;
 
     public void Init() {
         WinnedPuzzle = 0;
         CurrentPuzzle = 0;
-
+        NextPzlTimer = new Timer(.2f, StartNextPuzzle);
+        EndPzlTimer = new Timer(2f, EndPuzzle);
     }
 
     public void Update() {
@@ -53,53 +57,33 @@ public class TheGameManager {
         if (win) WinnedPuzzle++;
         InPuzzle = false;
 
-        //TODO End transition
+        TimerManager.Instance.AddTimer(this, EndPzlTimer, TimerManager.Timebook.Global);
+    }
 
-        SceneManager.Instance.LoadScene("MainScene");
+    private void EndPuzzle() {
+        SceneManager.Instance.LoadScene("MainScene",EndPuzzleHandler);
 
     }
 
+    private void EndPuzzleHandler() {
+        MenuManager.Instance.ReInit();
+        MenuManager.Instance.OutOfTrans();
 
+        Respawn.x += 2f;
+        Respawn.y += 2f;
+        MenuManager.Instance.Player.transform.localPosition = Respawn;
+    }
 
     public void BeginNextPuzzle() {
+        Respawn = MenuManager.Instance.Player.transform.localPosition;
         CurrentPuzzle++;
-
-        
-        //TODO Begin puzzle Transition
-        
-        switch (CurrentPuzzle) {
-            case 1:
-                SceneManager.Instance.LoadScene("Puzzle1");
-                break;
-            case 2:
-                SceneManager.Instance.LoadScene("Puzzle2");
-                break;
-            case 3:
-                SceneManager.Instance.LoadScene("Puzzle3");
-                break;
-            case 4:
-                SceneManager.Instance.LoadScene("Puzzle4");
-                break;
-            case 5:
-                SceneManager.Instance.LoadScene("Puzzle5");
-                break;
-            case 6:
-                SceneManager.Instance.LoadScene("Puzzle6");
-                break;
-            case 7:
-                SceneManager.Instance.LoadScene("Puzzle7");
-                break;
-            case 8:
-                SceneManager.Instance.LoadScene("Puzzle8");
-                break;
-            case 9:
-                SceneManager.Instance.LoadScene("Puzzle9");
-                break;
-            default:
-                Debug.LogError("Unnable to load next Puzzle");
-                break;
-        }
-
+        MenuManager.Instance.BeginTrans();
+        TimerManager.Instance.AddTimer(this, NextPzlTimer);
     }
 
+    private void StartNextPuzzle() {
+        SceneManager.Instance.LoadScene("Puzzle"+CurrentPuzzle);
+    }
+
+    
 }
