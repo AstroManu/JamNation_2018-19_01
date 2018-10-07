@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef2bc193957b61942ae1787eaeb7ed14
+guid: d55a348139095804c988ae7ada71ad8d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -21,36 +21,43 @@ ModelImporter:
     100030: handRightEND_JNT
     100032: handRightStart_JNT
     100034: head1_JNT
-    100036: headStart_JNT
-    100038: hipLeft_JNT
-    100040: hipRight_JNT
-    100042: legLeft1_JNT
-    100044: legLeft2_JNT
-    100046: legLeft3_JNT
-    100048: legLeft4_JNT
-    100050: legLeft5_JNT
-    100052: legLeftEND_JNT
-    100054: legLeftStart_JNT
-    100056: legRight1_JNT
-    100058: legRight2_JNT
-    100060: legRight3_JNT
-    100062: legRight4_JNT
-    100064: legRight5_JNT
-    100066: legRightEND_JNT
-    100068: legRightStart_JNT
-    100070: shoulderLeft_JNT
-    100072: shoulderRight_JNT
-    100074: spine1_JNT
-    100076: spine2_JNT
-    100078: spine3_JNT
-    100080: spine4_JNT
-    100082: spine5_JNT
-    100084: spine6_JNT
-    100086: spine7_JNT
-    100088: spineEND_JNT
-    100090: spineStart_JNT
-    100092: wristLeft_JNT
-    100094: wristRight_JNT
+    100036: head2_JNT
+    100038: head3_JNT
+    100040: head4_JNT
+    100042: head5_JNT
+    100044: head6_JNT
+    100046: head7_JNT
+    100048: headEND_JNT
+    100050: headStart_JNT
+    100052: hipLeft_JNT
+    100054: hipRight_JNT
+    100056: legLeft1_JNT
+    100058: legLeft2_JNT
+    100060: legLeft3_JNT
+    100062: legLeft4_JNT
+    100064: legLeft5_JNT
+    100066: legLeftEND_JNT
+    100068: legLeftStart_JNT
+    100070: legRight1_JNT
+    100072: legRight2_JNT
+    100074: legRight3_JNT
+    100076: legRight4_JNT
+    100078: legRight5_JNT
+    100080: legRightEND_JNT
+    100082: legRightStart_JNT
+    100084: shoulderLeft_JNT
+    100086: shoulderRight_JNT
+    100088: spine1_JNT
+    100090: spine2_JNT
+    100092: spine3_JNT
+    100094: spine4_JNT
+    100096: spine5_JNT
+    100098: spine6_JNT
+    100100: spine7_JNT
+    100102: spineEND_JNT
+    100104: spineStart_JNT
+    100106: wristLeft_JNT
+    100108: wristRight_JNT
     400000: armLeft1_JNT
     400002: armLeft2_JNT
     400004: armLeft3_JNT
@@ -69,37 +76,44 @@ ModelImporter:
     400030: handRightEND_JNT
     400032: handRightStart_JNT
     400034: head1_JNT
-    400036: headStart_JNT
-    400038: hipLeft_JNT
-    400040: hipRight_JNT
-    400042: legLeft1_JNT
-    400044: legLeft2_JNT
-    400046: legLeft3_JNT
-    400048: legLeft4_JNT
-    400050: legLeft5_JNT
-    400052: legLeftEND_JNT
-    400054: legLeftStart_JNT
-    400056: legRight1_JNT
-    400058: legRight2_JNT
-    400060: legRight3_JNT
-    400062: legRight4_JNT
-    400064: legRight5_JNT
-    400066: legRightEND_JNT
-    400068: legRightStart_JNT
-    400070: shoulderLeft_JNT
-    400072: shoulderRight_JNT
-    400074: spine1_JNT
-    400076: spine2_JNT
-    400078: spine3_JNT
-    400080: spine4_JNT
-    400082: spine5_JNT
-    400084: spine6_JNT
-    400086: spine7_JNT
-    400088: spineEND_JNT
-    400090: spineStart_JNT
-    400092: wristLeft_JNT
-    400094: wristRight_JNT
-    7400000: jump
+    400036: head2_JNT
+    400038: head3_JNT
+    400040: head4_JNT
+    400042: head5_JNT
+    400044: head6_JNT
+    400046: head7_JNT
+    400048: headEND_JNT
+    400050: headStart_JNT
+    400052: hipLeft_JNT
+    400054: hipRight_JNT
+    400056: legLeft1_JNT
+    400058: legLeft2_JNT
+    400060: legLeft3_JNT
+    400062: legLeft4_JNT
+    400064: legLeft5_JNT
+    400066: legLeftEND_JNT
+    400068: legLeftStart_JNT
+    400070: legRight1_JNT
+    400072: legRight2_JNT
+    400074: legRight3_JNT
+    400076: legRight4_JNT
+    400078: legRight5_JNT
+    400080: legRightEND_JNT
+    400082: legRightStart_JNT
+    400084: shoulderLeft_JNT
+    400086: shoulderRight_JNT
+    400088: spine1_JNT
+    400090: spine2_JNT
+    400092: spine3_JNT
+    400094: spine4_JNT
+    400096: spine5_JNT
+    400098: spine6_JNT
+    400100: spine7_JNT
+    400102: spineEND_JNT
+    400104: spineStart_JNT
+    400106: wristLeft_JNT
+    400108: wristRight_JNT
+    7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -128,35 +142,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: jump
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
