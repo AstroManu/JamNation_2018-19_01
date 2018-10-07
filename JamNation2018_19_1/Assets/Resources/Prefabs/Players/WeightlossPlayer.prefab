@@ -1847,6 +1847,9 @@ MonoBehaviour:
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 36352
+  pushCheckMask:
+    serializedVersion: 2
+    m_Bits: 3584
 --- !u!137 &137238413876270302
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
