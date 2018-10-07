@@ -33,6 +33,8 @@ public class PuzzleManager : MonoBehaviour {
 
 
 
+    
+
 	// Use this for initialization
 	void Start () {
         Ender = new Timer(TimeMax, PuzzleLose);
