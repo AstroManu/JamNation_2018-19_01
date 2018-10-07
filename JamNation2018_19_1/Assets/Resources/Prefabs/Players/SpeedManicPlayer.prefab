@@ -3227,7 +3227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d9db2ab546a4c409d0eb6bd3a2bead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputEnabled: 1
   rewiredPlayer: Player1
   anim: {fileID: 95007975503520296}
   lateralForce: 18
@@ -3272,7 +3271,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6507f23ae9cb5114cb0ae988fcbcf37c, type: 2}
+  - {fileID: 2100000, guid: 2c7042448f331bd4a97ffd3e6f2a393f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
