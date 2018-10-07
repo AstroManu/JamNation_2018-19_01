@@ -13983,7 +13983,7 @@ GameObject:
   - component: {fileID: 447768890}
   - component: {fileID: 447768889}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Second_Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14069,7 +14069,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 0.5
+  displayLightIntensity: 0.75
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &447768891
 Light:
@@ -14081,7 +14081,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.54147387, g: 0.60895085, b: 0.6792453, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.75
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -14114,13 +14114,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447768888}
-  m_LocalRotation: {x: -0.070962735, y: 0.41741276, z: 0.089787886, w: 0.90148157}
+  m_LocalRotation: {x: -0.07516622, y: 0.41782674, z: 0.08784022, w: 0.90114087}
   m_LocalPosition: {x: -2.09, y: 12.436314, z: -7.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -11.707001, y: 49.074, z: 6.017}
+  m_LocalEulerAnglesHint: {x: -12.056001, y: 49.159004, z: 5.604}
 --- !u!43 &448087878
 Mesh:
   m_ObjectHideFlags: 0
@@ -19835,7 +19835,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: b1f6a264e244e6543aa418ac3f3297e0, type: 3}
+  - {fileID: 2100000, guid: ed1fe8d81d884cb408942ada1d0c5c26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30693,7 +30693,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 24ce487e48250004fb1120c1c5397b24, type: 3}
+  - {fileID: 2100000, guid: dc9fdbb215bb58c4da13ffa095e88ef4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33031,7 +33031,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2c7042448f331bd4a97ffd3e6f2a393f, type: 3}
+  - {fileID: 2100000, guid: 6507f23ae9cb5114cb0ae988fcbcf37c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42477,7 +42477,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 146c2c959097f1d49a5ef54444094b1c, type: 3}
+  - {fileID: 2100000, guid: 584c544758f7b29458167c67098d06cb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52033,7 +52033,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1346472170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 376.2, y: 5, z: -12.5}
+  m_LocalPosition: {x: 0, y: 5, z: -12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 283044115}
@@ -82641,6 +82641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5919197cc090aac4e977b64125abce0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputEnabled: 1
   rewiredPlayer: Player1
   anim: {fileID: 0}
   lateralForce: 25
@@ -82654,6 +82655,9 @@ MonoBehaviour:
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 36352
+  pushCheckMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &2057221772
 BoxCollider:
   m_ObjectHideFlags: 0
