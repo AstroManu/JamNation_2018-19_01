@@ -5,6 +5,8 @@ using Rewired;
 
 public class BasePlayer : MonoBehaviour {
 
+	[HideInInspector]public bool inputEnabled = true;
+
 	public string rewiredPlayer;
 	protected Player player;
 
@@ -54,29 +56,31 @@ public class BasePlayer : MonoBehaviour {
 
 	private void FixedUpdate ()
 	{
-		float fixedDeltaTime = Time.fixedDeltaTime;
-
-		bool groundCheck = groundCheckZone.GetHits(groundCheckMask).Length > 0;
-
-		ApplyLateralInput(groundCheck);
-
-		RotatePlayerModel();
-
-		if (player.GetButtonDown("Jump"))
+		if (inputEnabled)
 		{
-			ApplyJumpForce(groundCheck);
+			float fixedDeltaTime = Time.fixedDeltaTime;
+
+			bool groundCheck = groundCheckZone.GetHits(groundCheckMask).Length > 0;
+
+			ApplyLateralInput(groundCheck);
+
+			RotatePlayerModel();
+
+			if (player.GetButtonDown("Jump"))
+			{
+				ApplyJumpForce(groundCheck);
+			}
+
+			ApplyGravityAcceleration();
+
+			upwardDampeningDelay = Mathf.MoveTowards(upwardDampeningDelay, 0f, fixedDeltaTime);
+			if (upwardDampeningDelay <= 0f && rb.velocity.y > maxVerticalVelocity)
+			{
+				rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
+			}
+
+			UpdateAnimation();
 		}
-
-		ApplyGravityAcceleration();
-
-		upwardDampeningDelay = Mathf.MoveTowards(upwardDampeningDelay, 0f, fixedDeltaTime);
-		if (upwardDampeningDelay <= 0f && rb.velocity.y > maxVerticalVelocity)
-		{
-			rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
-		}
-
-		UpdateAnimation();
-
 	}
 
 	protected virtual void ApplyLateralInput(bool groundCheck)
