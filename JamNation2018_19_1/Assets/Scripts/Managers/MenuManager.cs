@@ -62,9 +62,11 @@ public class MenuManager {
         if (GoInvisible) {
 
             foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
-                Color col = img.color;
-                col.a -= dt;
-                img.color = col;
+                if (img.transform.name != "Flash") {
+                    Color col = img.color;
+                    col.a -= dt;
+                    img.color = col;
+                }
             }
 
             if (Canvas.GetComponentInChildren<Image>().color.a.Near(0)) {
@@ -77,9 +79,11 @@ public class MenuManager {
             Canvas.SetActive(true);
 
             foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
-                Color col = img.color;
-                col.a += dt;
-                img.color = col;
+                if (img.transform.name != "Flash") {
+                    Color col = img.color;
+                    col.a += dt;
+                    img.color = col;
+                }
             }
             if (Canvas.GetComponentInChildren<Image>().color.a >= 0.5) {
                 GoVisible = false;
