@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9fe391fb472ad034899350adf468b403
+guid: 50e415aa0a6c4ce42871603ff7c625dc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -113,7 +113,7 @@ ModelImporter:
     400104: spineStart_JNT
     400106: wristLeft_JNT
     400108: wristRight_JNT
-    7400000: idle
+    7400000: expulsedLoop
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -144,10 +144,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle
+      name: expulsedLoop
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 90
+      firstFrame: 35
+      lastFrame: 65
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
