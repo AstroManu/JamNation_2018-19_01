@@ -125,9 +125,16 @@ public class BasePlayer : MonoBehaviour {
 
 	protected virtual void UpdateAnimation ()
 	{
-		bool moveInput = player.GetAxis("MoveHorizontal").Near(0f);
+		bool moveInput = !player.GetAxis("MoveHorizontal").Near(0f);
 
 		anim.SetBool("IsMoving", moveInput);
 		anim.SetBool("IsPushing", pushCheckZone.GetHits(pushCheckMask).Length > 0 && moveInput);
 	}
+
+    public void LaunchEndingAnimation() {
+        anim.SetTrigger("EndGame");
+        Debug.Log("Triger called");
+
+    }
+
 }

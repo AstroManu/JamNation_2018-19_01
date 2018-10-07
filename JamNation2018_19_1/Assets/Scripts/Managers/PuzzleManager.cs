@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PuzzleManager : MonoBehaviour {
 
     public float TimeMax = 60;
@@ -17,6 +18,8 @@ public class PuzzleManager : MonoBehaviour {
     private bool endTransition = true;
     private bool beginTransition = false;
 
+    private Vector3 Rotator;
+
 	// Use this for initialization
 	void Start () {
         Ender = new Timer(TimeMax, PuzzleLose);
@@ -25,8 +28,11 @@ public class PuzzleManager : MonoBehaviour {
         flash = canvas.GetComponentInChildren<Image>();
 
         flash.color = new Color(1,1,1,1);
+
 	}
-	
+
+
+    
 	// Update is called once per frame
 	void Update () {
         float dt = Time.deltaTime;
@@ -54,17 +60,22 @@ public class PuzzleManager : MonoBehaviour {
                 beginTransition = false;
             }
         }
-
+        
 	}
 
 
     public void PuzzleSolved() {
         Ender.Kill();
         beginTransition = true;
+        Player1.GetComponent<BasePlayer>().LaunchEndingAnimation();
+        Player2.GetComponent<BasePlayer>().LaunchEndingAnimation();
         TheGameManager.Instance.EndCurrentPuzzle(true);
     }
 
     private void PuzzleLose() {
+
+        Player1.GetComponent<BasePlayer>().LaunchEndingAnimation();
+        Player2.GetComponent<BasePlayer>().LaunchEndingAnimation();
         beginTransition = true;
         TheGameManager.Instance.EndCurrentPuzzle(false);
     }
