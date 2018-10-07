@@ -30,10 +30,12 @@ public class TheGameManager {
 
     private Vector3 Respawn;
 
+    private int nbPuzzle = 3;
+
     public void Init() {
         WinnedPuzzle = 0;
         CurrentPuzzle = 0;
-        NextPzlTimer = new Timer(.2f, StartNextPuzzle);
+        NextPzlTimer = new Timer(7.2f, StartNextPuzzle);
         EndPzlTimer = new Timer(2f, EndPuzzle);
     }
 
@@ -72,6 +74,11 @@ public class TheGameManager {
         Respawn.x += 2f;
         Respawn.y += 2f;
         MenuManager.Instance.Player.transform.localPosition = Respawn;
+
+        if (CurrentPuzzle == 2) {
+            LaunchFinalGame();
+        }
+
     }
 
     public void BeginNextPuzzle() {
@@ -85,5 +92,36 @@ public class TheGameManager {
         SceneManager.Instance.LoadScene("Puzzle"+CurrentPuzzle);
     }
 
-    
+
+
+    private void LaunchFinalGame() {
+        switch (WinnedPuzzle) {
+            case 0: BadEnd();
+                break;
+            case 1: BadEnd();
+                break;
+            case 2: GoodEnd();
+                break;
+            case 3: GoodEnd();
+                break;
+        }
+    }
+
+
+    private void GoodEnd() {
+        MenuManager.Instance.Player.GetComponent<VanillaPlayer>().GoodEnd();
+
+        TimerManager.Instance.CreateSimpleTimer(this, 3.6f, Close);
+    }
+
+    private void Close() {
+        PauseGame();
+        MenuManager.Instance.HardPause();
+        Application.Quit();
+    }
+
+    private void BadEnd() {
+        TimerManager.Instance.CreateSimpleTimer(this, 7.3f, Close);
+
+    }
 }

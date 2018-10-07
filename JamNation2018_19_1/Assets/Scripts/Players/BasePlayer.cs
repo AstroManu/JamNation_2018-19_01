@@ -137,8 +137,6 @@ public class BasePlayer : MonoBehaviour {
 
     public void LaunchEndingAnimation() {
         anim.SetTrigger("EndGame");
-        Debug.Log("Triger called");
-
     }
 
 }

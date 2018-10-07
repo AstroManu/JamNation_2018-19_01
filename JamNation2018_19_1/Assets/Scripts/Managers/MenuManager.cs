@@ -119,15 +119,30 @@ public class MenuManager {
 
 
         if (GameLaunched) {
-            Player.transform.position = new Vector3(Player.transform.position.x + (dt * 1.2f), Player.transform.position.y, Player.transform.position.z);
+            Player.transform.position = new Vector3(Player.transform.position.x + (dt * 1.5f), Player.transform.position.y, Player.transform.position.z);
+            Player.GetComponent<VanillaPlayer>().Walk();
+        }
+        else {
+            if(Player)
+                Player.GetComponent<VanillaPlayer>().DontWalk();
         }
     }
 
     public void BeginTrans() {
+        Player.GetComponent<VanillaPlayer>().GoCrazy();
+
         GameLaunched = false;
+
+        TimerManager.Instance.CreateSimpleTimer(this, 7f, goFlash);
+    }
+
+    private void goFlash() {
         Canvas.SetActive(true);
         GoFlash = true;
+    }
 
+    public void HardPause() {
+        GameLaunched = false;
     }
 
     public void OutOfTrans() {

@@ -7,8 +7,9 @@ public class TransitionTrigger : MonoBehaviour {
 
 
     void OnTriggerEnter(Collider col) {
-        Debug.Log("Triggered");
-        TheGameManager.Instance.BeginNextPuzzle();
-        Destroy(gameObject);
+
+        if (col.transform.name == "DefaultPlayer") {
+            TheGameManager.Instance.BeginNextPuzzle();
+        }
     }
 }

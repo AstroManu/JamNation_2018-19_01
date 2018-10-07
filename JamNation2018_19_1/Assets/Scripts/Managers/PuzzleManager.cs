@@ -11,6 +11,8 @@ public class PuzzleManager : MonoBehaviour {
     public GameObject Player2;
     public bool isShiny;
 
+    public GameObject endZone;
+
     private Timer Ender;
     private Image flash;
     private GameObject canvas;
@@ -29,6 +31,8 @@ public class PuzzleManager : MonoBehaviour {
     private GameObject Rotor;
     private bool endTrigger = true;
 
+
+
 	// Use this for initialization
 	void Start () {
         Ender = new Timer(TimeMax, PuzzleLose);
@@ -44,6 +48,8 @@ public class PuzzleManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float dt = Time.deltaTime;
+
+        
 
         if (endTransition) {
             Color col = flash.color;
