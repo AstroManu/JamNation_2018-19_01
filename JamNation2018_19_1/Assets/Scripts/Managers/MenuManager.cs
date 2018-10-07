@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager {
 
@@ -20,23 +21,45 @@ public class MenuManager {
     #endregion
 
     private GameObject Canvas;
+    private bool GoInvisible = false;
+
 
     public void Init() {
         Canvas = GameObject.Find("Canvas");
+        TimerManager.Instance.CreateSimpleTimer(this, 2f, test);
 
         // TO DELETE AFTER INPUT MANAGED
-        Start();
     }
 
     public void Update() {
-        //TODO Manage INPUT
+        if (GoInvisible) {
+            float dt = Time.deltaTime;
 
+            foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
+                Color col = img.color;
+                col.a -= dt;
+                img.color = col;
+            }
+
+            if (Canvas.GetComponentInChildren<Image>().color.a <= 0) {
+                GoInvisible = false;
+                Canvas.SetActive(false);
+            }
+        }
 
     }
 
+    private void test() {
+        LaunchGame();
+        Debug.Log("GameLaunched");
+    }
+
+    private void LaunchGame() {
+        TheGameManager.Instance.LaunchGame();
+        GoInvisible = true;
+    }
     
     private void Start() {
-        Canvas.SetActive(false);
         TheGameManager.Instance.LaunchGame();
     }
     private void Patch() {}

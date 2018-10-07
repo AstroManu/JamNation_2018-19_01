@@ -10,9 +10,11 @@ public class MainFlow : Flow {
     }
 
     public override void InitializeFlow() {
+        MenuManager.Instance.Init();
     }
 
     public override void UpdateFlow(float _dt) {
+        MenuManager.Instance.Update();
     }
 
     // Use this for initialization

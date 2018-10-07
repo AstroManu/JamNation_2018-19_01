@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TheGameManager {
 
@@ -24,21 +25,25 @@ public class TheGameManager {
     public int WinnedPuzzle { get; private set; }
     public int CurrentPuzzle { get; private set; }
 
+   
 
     public void Init() {
         WinnedPuzzle = 0;
         CurrentPuzzle = 0;
+
     }
 
     public void Update() {
+
+       
 
     }
 
     public void LaunchGame() {
         TimerManager.Instance.InGame = true;
         InPuzzle = false;
-
     }
+    
 
     public void EndCurrentPuzzle(bool win) {
         if (win) WinnedPuzzle++;
