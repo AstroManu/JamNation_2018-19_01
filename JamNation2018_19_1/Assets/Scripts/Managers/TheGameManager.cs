@@ -26,12 +26,15 @@ public class TheGameManager {
     public int CurrentPuzzle { get; private set; }
 
     private Timer NextPzlTimer;
+    private Timer EndPzlTimer;
+
+    private Vector3 Respawn;
 
     public void Init() {
         WinnedPuzzle = 0;
         CurrentPuzzle = 0;
         NextPzlTimer = new Timer(.2f, StartNextPuzzle);
-
+        EndPzlTimer = new Timer(2f, EndPuzzle);
     }
 
     public void Update() {
@@ -54,19 +57,28 @@ public class TheGameManager {
         if (win) WinnedPuzzle++;
         InPuzzle = false;
 
-        //TODO End transition
+        TimerManager.Instance.AddTimer(this, EndPzlTimer, TimerManager.Timebook.Global);
+    }
 
-        SceneManager.Instance.LoadScene("MainScene");
+    private void EndPuzzle() {
+        SceneManager.Instance.LoadScene("MainScene",EndPuzzleHandler);
 
     }
 
+    private void EndPuzzleHandler() {
+        MenuManager.Instance.ReInit();
+        MenuManager.Instance.OutOfTrans();
 
+        Respawn.x += 2f;
+        Respawn.y += 2f;
+        MenuManager.Instance.Player.transform.localPosition = Respawn;
+    }
 
     public void BeginNextPuzzle() {
+        Respawn = MenuManager.Instance.Player.transform.localPosition;
         CurrentPuzzle++;
         MenuManager.Instance.BeginTrans();
         TimerManager.Instance.AddTimer(this, NextPzlTimer);
-        
     }
 
     private void StartNextPuzzle() {
