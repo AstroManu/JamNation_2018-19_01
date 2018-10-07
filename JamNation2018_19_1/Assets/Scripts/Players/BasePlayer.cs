@@ -125,6 +125,6 @@ public class BasePlayer : MonoBehaviour {
 	protected virtual void UpdateAnimation ()
 	{
 		anim.SetBool("IsMoving", rb.velocity.x > 0.05f || rb.velocity.x < -0.05f);
-		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0);
+		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0 && player.GetAxis("MoveHorizontal") != 0f);
 	}
 }

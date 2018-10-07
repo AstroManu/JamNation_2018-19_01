@@ -9,7 +9,7 @@ public class SpeedManicPlayer : BasePlayer {
 	protected override void Init()
 	{
 		base.Init();
-		manicInput = 0.5f;
+		manicInput = 1f;
 	}
 
 	protected override void ApplyLateralInput(bool groundCheck)
