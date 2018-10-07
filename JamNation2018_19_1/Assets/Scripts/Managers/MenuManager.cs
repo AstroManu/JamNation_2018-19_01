@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Rewired;
 
 public class MenuManager {
 
@@ -22,18 +23,27 @@ public class MenuManager {
 
     private GameObject Canvas;
     private bool GoInvisible = false;
+    private bool GoVisible = false;
+    private Player Player1;
+    private Player Player2;
 
+    public GameObject Player;
+
+    private bool GameLaunched = false;
 
     public void Init() {
         Canvas = GameObject.Find("Canvas");
-        TimerManager.Instance.CreateSimpleTimer(this, 2f, test);
 
-        // TO DELETE AFTER INPUT MANAGED
+        Player1 = ReInput.players.GetPlayer("Player1");
+        Player2 = ReInput.players.GetPlayer("Player2");
+
+        Player = GameObject.Find("DefaultPlayer");
     }
 
     public void Update() {
+        float dt = Time.deltaTime;
+
         if (GoInvisible) {
-            float dt = Time.deltaTime;
 
             foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
                 Color col = img.color;
@@ -41,22 +51,46 @@ public class MenuManager {
                 img.color = col;
             }
 
-            if (Canvas.GetComponentInChildren<Image>().color.a <= 0) {
+            if (Canvas.GetComponentInChildren<Image>().color.a.Near(0)) {
                 GoInvisible = false;
                 Canvas.SetActive(false);
             }
         }
 
+        if (GoVisible) {
+            Canvas.SetActive(true);
+
+            foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
+                Color col = img.color;
+                col.a += dt;
+                img.color = col;
+            }
+            if (Canvas.GetComponentInChildren<Image>().color.a >= 0.5) {
+                GoVisible = false;
+            }
+        }
+
+        if (Player1.GetButtonDown("Start") || Player2.GetButtonDown("Start")) {
+            if (!GameLaunched) LaunchGame();
+            else Pause();
+        }
+
+
+        if (GameLaunched) {
+            Player.transform.position = new Vector3(Player.transform.position.x + (dt * 1.2f), Player.transform.position.y, Player.transform.position.z);
+        }
     }
 
-    private void test() {
-        LaunchGame();
-        Debug.Log("GameLaunched");
+    private void Pause() {
+        TheGameManager.Instance.PauseGame();
+        GoVisible = true;
+        GameLaunched = false;
     }
 
     private void LaunchGame() {
         TheGameManager.Instance.LaunchGame();
         GoInvisible = true;
+        GameLaunched = true;
     }
     
     private void Start() {

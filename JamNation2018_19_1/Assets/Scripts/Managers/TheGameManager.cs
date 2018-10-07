@@ -43,7 +43,11 @@ public class TheGameManager {
         TimerManager.Instance.InGame = true;
         InPuzzle = false;
     }
-    
+
+    public void PauseGame() {
+        TimerManager.Instance.InGame = false;
+    }
+
 
     public void EndCurrentPuzzle(bool win) {
         if (win) WinnedPuzzle++;
