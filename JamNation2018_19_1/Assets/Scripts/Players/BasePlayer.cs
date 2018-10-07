@@ -30,6 +30,7 @@ public class BasePlayer : MonoBehaviour {
 	private float upwardDampeningDelay = 0f;
 
 	public LayerMask groundCheckMask;
+	public LayerMask pushCheckMask;
 
 	protected Quaternion targetRotation;
 
@@ -127,6 +128,6 @@ public class BasePlayer : MonoBehaviour {
 		bool moveInput = player.GetAxis("MoveHorizontal").Near(0f);
 
 		anim.SetBool("IsMoving", moveInput);
-		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0 && moveInput);
+		anim.SetBool("IsPushing", pushCheckZone.GetHits(pushCheckMask).Length > 0 && moveInput);
 	}
 }

@@ -3217,6 +3217,9 @@ MonoBehaviour:
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 34304
+  pushCheckMask:
+    serializedVersion: 2
+    m_Bits: 1536
 --- !u!114 &114979871097561282
 MonoBehaviour:
   m_ObjectHideFlags: 1
