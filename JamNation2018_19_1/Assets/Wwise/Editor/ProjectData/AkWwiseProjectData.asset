@@ -1,0 +1,658 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d320d1dd49fff8442b2b5ad69df4b220, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 05c0b9bd67535a4ab32586072b82251d
+    m_lastTime: -8586626750132887228
+    List: []
+  - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
+    ParentPhysicalPath: 
+    guid: 6b663d46a83ca54f8b4a5fef12b883f6
+    m_lastTime: -8586626750132720024
+    List:
+    - name: Acoustic_Banner
+      guid: f2532d2fccda8e408b8898b1b52a26d6
+      id: 4168643977
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Acoustic_Banner
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Acoustic_Banner
+    - name: Anechoic
+      guid: 32c20a8be202de4ebeacfdd1a900e3ed
+      id: 1873957695
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Anechoic
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Anechoic
+    - name: Brick
+      guid: a9a586b004f2534ca838bdb18b18f6d6
+      id: 504532776
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Brick
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Brick
+    - name: Carpet
+      guid: 8975223456dc604296c4b9f4b669092b
+      id: 2412606308
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Carpet
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Carpet
+    - name: Concrete
+      guid: 001cf85c9628e04aaf7c3080bdaba682
+      id: 841620460
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Concrete
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Concrete
+    - name: Cork_Tiles
+      guid: 19c9d2305f92434189063dbb3c4ae5e2
+      id: 3195498748
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Cork_Tiles
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Cork_Tiles
+    - name: Curtains
+      guid: 339ee6f8975c6849b508a1535f2d66e8
+      id: 2928161104
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Curtains
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Curtains
+    - name: Drywall
+      guid: f4e3a4680b4c8746a8b8a84db93dbc8f
+      id: 3670307564
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Drywall
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Drywall
+    - name: Fabric
+      guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
+      id: 1970351858
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Fabric
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Fabric
+    - name: Mountain
+      guid: 313793c51a00b44a98dd9b033a8c8eab
+      id: 513139656
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Mountain
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Mountain
+    - name: Tile
+      guid: c4da82a82a13b747ba9db9907ba29cc0
+      id: 2637588553
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Tile
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Tile
+    - name: Wood
+      guid: 96bcff1fe76f9e48ba6c7c14a71391ae
+      id: 2058049674
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Wood
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Wood
+    - name: Wood_Bright
+      guid: e5d1857ba2c1634e9a13cec54b641adc
+      id: 4262522749
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Wood_Bright
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Bright
+    - name: Wood_Deep
+      guid: 8e474652dac50c4ea0dec98d1479529a
+      id: 1755085759
+      PathAndIcons:
+      - ElementName: Factory Reflect Acoustic Textures
+        ObjectType: 12
+      - ElementName: Textures
+        ObjectType: 4
+      - ElementName: Wood_Deep
+        ObjectType: 15
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Deep
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 823d3ba5ed80f3439bc406d31a392728
+    m_lastTime: -8586626750135637213
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b6655c91aabed7498f3ad02b828af82b
+    m_lastTime: -8586626750134043616
+    List:
+    - name: Jam_Nation_01
+      guid: 9987075cf256be4e8bacec24426d020b
+      id: 3501439171
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jam_Nation_01
+        ObjectType: 7
+      Path: Default Work Unit\Jam_Nation_01
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: ae101e04d0ba58469d3b4728436a74e2
+    m_lastTime: -8586626750154023925
+    List:
+    - name: MUSIC_START
+      guid: a4d50936740dc74993f8582d6bcc03af
+      id: 3725903807
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUSIC_START
+        ObjectType: 3
+      Path: Default Work Unit\MUSIC_START
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: MUSIC_STOP
+      guid: 8fe47b1ce82cbe438e30ea72c369d5d1
+      id: 3227181061
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MUSIC_STOP
+        ObjectType: 3
+      Path: Default Work Unit\MUSIC_STOP
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SET_STATE_CutScene
+      guid: 5507d6f1861e284793a1b130df47c713
+      id: 2169159884
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SET_STATE_CutScene
+        ObjectType: 3
+      Path: Default Work Unit\SET_STATE_CutScene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SET_STATE_Depressed
+      guid: 1f9fa36363d5224a89d5dd388c9ecd15
+      id: 3989152013
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SET_STATE_Depressed
+        ObjectType: 3
+      Path: Default Work Unit\SET_STATE_Depressed
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SET_STATE_Maniac
+      guid: 3e4af92788204f4f93aedd9a5bc68762
+      id: 2748893453
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SET_STATE_Maniac
+        ObjectType: 3
+      Path: Default Work Unit\SET_STATE_Maniac
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SET_STATE_Menu
+      guid: 4c21d0b4e4075045a96d6ceae06d14e5
+      id: 2302270969
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SET_STATE_Menu
+        ObjectType: 3
+      Path: Default Work Unit\SET_STATE_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Menu_BStart
+      guid: 0a8529029e34e54d9d72ea4d0d725df3
+      id: 276595341
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: SFX_Menu_BStart
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Menu\SFX_Menu_BStart
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Menu_BTutorial
+      guid: eda803df419ad649811725eadae50286
+      id: 741549693
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: SFX_Menu_BTutorial
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Menu\SFX_Menu_BTutorial
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Misc_Laugh
+      guid: cfdd1b24050a0f4ca915e951c67f2e85
+      id: 3578107879
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Misc
+        ObjectType: 4
+      - ElementName: SFX_Misc_Laugh
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Misc\SFX_Misc_Laugh
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Misc_Pages
+      guid: f9ffd1f17b544f4185a4fe829e0d2831
+      id: 1076661556
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Misc
+        ObjectType: 4
+      - ElementName: SFX_Misc_Pages
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Misc\SFX_Misc_Pages
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Misc_Whisper
+      guid: 2513463109ee4a4994056f1b802cf4d6
+      id: 2703127818
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Misc
+        ObjectType: 4
+      - ElementName: SFX_Misc_Whisper
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Misc\SFX_Misc_Whisper
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Player1_Jump
+      guid: 4a1ff9e34cfb6043871502db78f93813
+      id: 1478469626
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player1
+        ObjectType: 4
+      - ElementName: SFX_Player1_Jump
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Player1\SFX_Player1_Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Player1_Land
+      guid: d39e6b55e78c5a45a0a299540d45448a
+      id: 2079848349
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player1
+        ObjectType: 4
+      - ElementName: SFX_Player1_Land
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Player1\SFX_Player1_Land
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Player1_Walk
+      guid: 0c507c1a940acd4398f6000230a0d0f0
+      id: 1973642645
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player1
+        ObjectType: 4
+      - ElementName: SFX_Player1_Walk
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Player1\SFX_Player1_Walk
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Player2_Jump
+      guid: d4034da29f6eb84c99638e852ad17384
+      id: 4098683651
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player2
+        ObjectType: 4
+      - ElementName: SFX_Player2_Jump
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Player2\SFX_Player2_Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Player2_Land
+      guid: 905dc0a3b898c8488251109adfe71c8a
+      id: 3507750560
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player2
+        ObjectType: 4
+      - ElementName: SFX_Player2_Land
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Player2\SFX_Player2_Land
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Player2_Walk
+      guid: d5b9efa91c8b16428eccba800b289ef1
+      id: 3287861316
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Player2
+        ObjectType: 4
+      - ElementName: SFX_Player2_Walk
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Player2\SFX_Player2_Walk
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Structure_Activate
+      guid: e39bab1c3d48ef418723711fcc1d556c
+      id: 3782729764
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Structure
+        ObjectType: 4
+      - ElementName: SFX_Structure_Activate
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Structure\SFX_Structure_Activate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX_Structure_Block_Land
+      guid: f23dab3407a1d04ebdfce320691cbc5a
+      id: 3908755570
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Structure
+        ObjectType: 4
+      - ElementName: SFX_Structure_Block_Land
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Structure\SFX_Structure_Block_Land
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4189c4f43269414186694afeadb3a56d
+    m_lastTime: -8586626750153762473
+    List: []
+  - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
+    ParentPhysicalPath: 
+    guid: 5577163b42fb8b4598bf96f557afb3b9
+    m_lastTime: -8586626750153663788
+    List:
+    - name: SS_Air_Fear
+      guid: 59062ef746431c4ea1b1dab46a05101e
+      id: 1351367891
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Fear
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fear
+    - name: SS_Air_Freefall
+      guid: 37fe2d2f9e4f944d83d853cca39781ad
+      id: 3002758120
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Freefall
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Freefall
+    - name: SS_Air_Fury
+      guid: dc79aea23acaba4696529986c322a87b
+      id: 1029930033
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Fury
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fury
+    - name: SS_Air_Month
+      guid: 45b4e209a3c47f44b3ca818a1d925ef7
+      id: 2648548617
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Month
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Month
+    - name: SS_Air_Presence
+      guid: 1a81b7e32f7b0f49b44f5fe51b468041
+      id: 3847924954
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Presence
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Presence
+    - name: SS_Air_RPM
+      guid: ab9048a3d5b92645a64d5290c43ef2dc
+      id: 822163944
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_RPM
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_RPM
+    - name: SS_Air_Size
+      guid: efeb291393a12e47a38c64668b494879
+      id: 3074696722
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Size
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Size
+    - name: SS_Air_Storm
+      guid: db8c3fe9d1063747acaf7cd44bbed783
+      id: 3715662592
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Storm
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Storm
+    - name: SS_Air_TimeOfDay
+      guid: 2ca76f537e8c8b4cae03ef34fdadc314
+      id: 3203397129
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_TimeOfDay
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay
+    - name: SS_Air_Turbulence
+      guid: 197ba8edaa73a0409f192073606db710
+      id: 4160247818
+      PathAndIcons:
+      - ElementName: Factory SoundSeed Air Game Syncs
+        ObjectType: 12
+      - ElementName: SS_Air_Turbulence
+        ObjectType: 13
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Turbulence
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 89a4c2e2b92388438481deb45c68259e
+    m_lastTime: -8586626750133678420
+    List:
+    - name: Etat
+      guid: bbc18c0e95b0c642b8e192dc08214534
+      id: 295955913
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Etat
+        ObjectType: 9
+      Path: Default Work Unit\Etat
+      values:
+      - name: CutScene
+        guid: fcfe732289e80a44a9c5f1f34234ee4b
+        id: 1182958561
+        PathAndIcons:
+        - ElementName: CutScene
+          ObjectType: 8
+      - name: Depressed
+        guid: 57c5b8b4c7e2544eaac08dc59b5439bd
+        id: 3375686694
+        PathAndIcons:
+        - ElementName: Depressed
+          ObjectType: 8
+      - name: Maniac
+        guid: fb2d59c041ccdf4cab90a7dc44997eab
+        id: 3897063352
+        PathAndIcons:
+        - ElementName: Maniac
+          ObjectType: 8
+      - name: Menu
+        guid: 2c8907d7bd15184ea94c4f1a1f3de047
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 8
+      - name: None
+        guid: 65ef3f9050cc274099181869c7be4f7a
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4cebce8596702147afb755f466608a14
+    m_lastTime: -8586626750133355878
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 12f9afeee021884cad352e15a36cbc74
+    m_lastTime: -8586626750133199666
+    List: []
+  ExpandedItems:
+  - /JAM_NATION_01
+  - /JAM_NATION_01/Events
+  - /JAM_NATION_01/Events/Default Work Unit
+  - /JAM_NATION_01/Events/Default Work Unit/SFX
+  - /JAM_NATION_01/Events/Default Work Unit/SFX/Menu
+  - /JAM_NATION_01/Events/Default Work Unit/SFX/Misc
+  - /JAM_NATION_01/Events/Default Work Unit/SFX/Player1
+  - /JAM_NATION_01/Events/Default Work Unit/SFX/Structure
+  - /JAM_NATION_01/States
+  - /JAM_NATION_01/States/Default Work Unit
+  - /JAM_NATION_01/States/Default Work Unit/Etat
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

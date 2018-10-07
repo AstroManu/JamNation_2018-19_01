@@ -33,9 +33,15 @@ public class SpeedManicPlayer : BasePlayer {
 		rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -maxLateralVelocity, maxLateralVelocity), rb.velocity.y, rb.velocity.z);
 	}
 
-	protected override void UpdateAnimation()
+	protected override void UpdateAnimation(bool groundCheck)
 	{
 		anim.SetBool("IsMoving", !manicInput.Near(0));
-		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0 && true);
+		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0 && !manicInput.Near(0));
+
+		if (groundCheck && !manicInput.Near(0) && walkSoundEventDelay <= 0f)
+		{
+			AkSoundEngine.PostEvent("SFX_" + rewiredPlayer + "_Walk", gameObject);
+			walkSoundEventDelay = 0.5f;
+		}
 	}
 }

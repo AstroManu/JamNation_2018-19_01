@@ -36,6 +36,8 @@ public class BasePlayer : MonoBehaviour {
 
 	protected Quaternion targetRotation;
 
+	protected float walkSoundEventDelay = 0.3f;
+
 	private void Start ()
 	{
 		Init();
@@ -79,7 +81,8 @@ public class BasePlayer : MonoBehaviour {
 				rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
 			}
 
-			UpdateAnimation();
+			walkSoundEventDelay = Mathf.MoveTowards(walkSoundEventDelay, 0f, fixedDeltaTime);
+			UpdateAnimation(groundCheck);
 		}
 	}
 
@@ -116,6 +119,7 @@ public class BasePlayer : MonoBehaviour {
 			rb.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
 			upwardDampeningDelay = jumpDampeningDelay;
 			anim.SetTrigger("Jump");
+			AkSoundEngine.PostEvent("SFX_"+ rewiredPlayer +"_Land", gameObject);
 		}
 	}
 
@@ -127,12 +131,18 @@ public class BasePlayer : MonoBehaviour {
 		}
 	}
 
-	protected virtual void UpdateAnimation ()
+	protected virtual void UpdateAnimation (bool groundCheck)
 	{
 		bool moveInput = !player.GetAxis("MoveHorizontal").Near(0f);
 
 		anim.SetBool("IsMoving", moveInput);
 		anim.SetBool("IsPushing", pushCheckZone.GetHits(pushCheckMask).Length > 0 && moveInput);
+
+		if (groundCheck && moveInput && walkSoundEventDelay <= 0f)
+		{
+			AkSoundEngine.PostEvent("SFX_" + rewiredPlayer + "_Walk", gameObject);
+			walkSoundEventDelay = 0.5f;
+		}
 	}
 
     public void LaunchEndingAnimation() {
