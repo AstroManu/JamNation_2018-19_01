@@ -32,4 +32,10 @@ public class SpeedManicPlayer : BasePlayer {
 
 		rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -maxLateralVelocity, maxLateralVelocity), rb.velocity.y, rb.velocity.z);
 	}
+
+	protected override void UpdateAnimation()
+	{
+		anim.SetBool("IsMoving", true);
+		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0 && true);
+	}
 }
