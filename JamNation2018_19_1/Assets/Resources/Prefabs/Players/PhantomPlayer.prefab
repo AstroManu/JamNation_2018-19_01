@@ -758,6 +758,9 @@ MonoBehaviour:
   maxLateralVelocity: 5
   jumpImpulse: 6.5
   gravityAcceleration: 20
+  maxVerticalVelocity: 1
+  upwardDampeningDelta: 1
+  jumpDampeningDelay: 0.2
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 34304

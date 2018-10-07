@@ -756,8 +756,11 @@ MonoBehaviour:
   lateralForce: 30
   airLateralForce: 5
   maxLateralVelocity: 5
-  jumpImpulse: 10
+  jumpImpulse: 20
   gravityAcceleration: 15
+  maxVerticalVelocity: 1
+  upwardDampeningDelta: 1
+  jumpDampeningDelay: 0.2
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 36352
