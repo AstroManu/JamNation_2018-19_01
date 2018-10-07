@@ -10,9 +10,12 @@ public class BasePlayer : MonoBehaviour {
 
 	protected TriggerArea triggerArea;
 	protected TriggerZone groundCheckZone;
+	protected TriggerZone pushCheckZone;
 
 	protected Rigidbody rb;
 	protected Transform modelPivot;
+
+	public Animator anim;
 
 	public float lateralForce = 10f;
 	public float airLateralForce = 5f;
@@ -41,6 +44,7 @@ public class BasePlayer : MonoBehaviour {
 		player = ReInput.players.GetPlayer(rewiredPlayer);
 		triggerArea = GetComponent<TriggerArea>();
 		groundCheckZone = triggerArea.GetZone("GroundCheck");
+		pushCheckZone = triggerArea.GetZone("PushCheck");
 		rb = GetComponent<Rigidbody>();
 		modelPivot = transform.Find("Model");
 
@@ -67,9 +71,10 @@ public class BasePlayer : MonoBehaviour {
 		upwardDampeningDelay = Mathf.MoveTowards(upwardDampeningDelay, 0f, fixedDeltaTime);
 		if (upwardDampeningDelay <= 0f && rb.velocity.y > maxVerticalVelocity)
 		{
-			Debug.Log("Dampening!");
 			rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
 		}
+
+		UpdateAnimation();
 
 	}
 
@@ -105,6 +110,7 @@ public class BasePlayer : MonoBehaviour {
 			rb.velocity = new Vector3(rb.velocity.x, 0f, 0f);
 			rb.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
 			upwardDampeningDelay = jumpDampeningDelay;
+			anim.SetTrigger("Jump");
 		}
 	}
 
@@ -114,5 +120,11 @@ public class BasePlayer : MonoBehaviour {
 		{
 			rb.AddForce(0f, -gravityAcceleration, 0f);
 		}
+	}
+
+	protected virtual void UpdateAnimation ()
+	{
+		anim.SetBool("IsMoving", rb.velocity.x > 0.05f || rb.velocity.x < -0.05f);
+		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0);
 	}
 }

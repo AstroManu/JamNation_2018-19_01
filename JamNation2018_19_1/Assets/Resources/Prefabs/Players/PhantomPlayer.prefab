@@ -236,6 +236,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1117534719332800
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4547254510024384}
+  m_Layer: 0
+  m_Name: PushCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1121905522372562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4100679296646950}
+  - {fileID: 4547254510024384}
   m_Father: {fileID: 4851441272251642}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 92, z: 0}
@@ -2331,6 +2347,19 @@ Transform:
   m_Father: {fileID: 4965394940146054}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4547254510024384
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117534719332800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.025, y: 1.135, z: 0.716}
+  m_LocalScale: {x: 1, y: 1.51, z: -0.3}
+  m_Children: []
+  m_Father: {fileID: 4002854737362472}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4557729816139814
 Transform:
   m_ObjectHideFlags: 1
@@ -2913,7 +2942,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168996413925996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.84, y: -0.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4002854737362472}
@@ -3176,6 +3205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewiredPlayer: Player2
+  anim: {fileID: 95400259439143380}
   lateralForce: 16
   airLateralForce: 3
   maxLateralVelocity: 1
@@ -3203,6 +3233,11 @@ MonoBehaviour:
     transform: {fileID: 4650121822101474}
     shape: 0
     gizmoColor: {r: 1, g: 0, b: 0, a: 0.5019608}
+    gizmo: 2
+  - tag: PushCheck
+    transform: {fileID: 4547254510024384}
+    shape: 0
+    gizmoColor: {r: 0.06607044, g: 1, b: 0, a: 0.5019608}
     gizmo: 2
 --- !u!137 &137553237581748058
 SkinnedMeshRenderer:

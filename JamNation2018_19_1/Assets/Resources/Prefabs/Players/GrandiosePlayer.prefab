@@ -1307,6 +1307,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1918050337300962
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4611515939435174}
+  m_Layer: 0
+  m_Name: PushCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1920982386062426
 GameObject:
   m_ObjectHideFlags: 1
@@ -1462,7 +1477,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085497094603906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.9, y: 2.88, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4049709740834628}
@@ -1495,6 +1510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4425896908412462}
+  - {fileID: 4611515939435174}
   m_Father: {fileID: 4032256161868458}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 92, z: 0}
@@ -2181,6 +2197,19 @@ Transform:
   m_Father: {fileID: 4962480876675068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4611515939435174
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918050337300962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.588, z: 1.321}
+  m_LocalScale: {x: 1, y: 2.5, z: 0.52}
+  m_Children: []
+  m_Father: {fileID: 4049709740834628}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4615511718188654
 Transform:
   m_ObjectHideFlags: 1
@@ -2528,7 +2557,7 @@ Transform:
   m_GameObject: {fileID: 1886293414831398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 0.99, y: 0.13, z: 0.5}
+  m_LocalScale: {x: 1.98, y: 0.13, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4032256161868458}
   m_RootOrder: 1
@@ -2799,7 +2828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewiredPlayer: Player1
-  lateralForce: 17
+  anim: {fileID: 95935957994591210}
+  lateralForce: 30
   airLateralForce: 2.5
   maxLateralVelocity: 3.2
   jumpImpulse: 7.5
@@ -2826,6 +2856,11 @@ MonoBehaviour:
     transform: {fileID: 4874412424086360}
     shape: 0
     gizmoColor: {r: 1, g: 0, b: 0, a: 0.5019608}
+    gizmo: 2
+  - tag: PushCheck
+    transform: {fileID: 4611515939435174}
+    shape: 0
+    gizmoColor: {r: 0.031270742, g: 1, b: 0, a: 0.5019608}
     gizmo: 2
 --- !u!137 &137605546386894114
 SkinnedMeshRenderer:
