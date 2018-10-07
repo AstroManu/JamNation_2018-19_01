@@ -2799,14 +2799,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewiredPlayer: Player1
-  lateralForce: 30
-  airLateralForce: 5
-  maxLateralVelocity: 5
-  jumpImpulse: 20
-  gravityAcceleration: 15
-  maxVerticalVelocity: 1
+  lateralForce: 17
+  airLateralForce: 2.5
+  maxLateralVelocity: 3.2
+  jumpImpulse: 7.5
+  gravityAcceleration: 11
+  maxVerticalVelocity: 3.5
   upwardDampeningDelta: 1
-  jumpDampeningDelay: 0.2
+  jumpDampeningDelay: 1
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 36352

@@ -26,6 +26,9 @@ public class MenuManager {
     private bool GoVisible = false;
     private Player Player1;
     private Player Player2;
+    private bool GoFlash = false;
+    private bool GoUnFlash = false;
+    private Image flasher;
 
     public GameObject Player;
 
@@ -38,17 +41,54 @@ public class MenuManager {
         Player2 = ReInput.players.GetPlayer("Player2");
 
         Player = GameObject.Find("DefaultPlayer");
+        GoFlash = false;
+        flasher = GameObject.Find("Flash").GetComponent<Image>();
+        flasher.color = new Color(1, 1, 1, 0);
+    }
+
+    public void ReInit() {
+        Canvas = GameObject.Find("Canvas");
+
+        Player1 = ReInput.players.GetPlayer("Player1");
+        Player2 = ReInput.players.GetPlayer("Player2");
+
+        Player = GameObject.Find("DefaultPlayer");
+        GoFlash = false;
+        flasher = GameObject.Find("Flash").GetComponent<Image>();
+        LaunchGame();
     }
 
     public void Update() {
         float dt = Time.deltaTime;
 
+        if (GoFlash) {
+            Color col = flasher.color;
+            col.a += dt * 6;
+            flasher.color = col;
+
+            if (col.a.Near(1)) {
+                GoFlash = false;
+            }
+        }
+
+        if (GoUnFlash) {
+            Color col = flasher.color;
+            col.a -= dt ;
+            flasher.color = col;
+
+            if (col.a.Near(0,.05f)) {
+                GoUnFlash = false;
+            }
+        }
+
         if (GoInvisible) {
 
             foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
-                Color col = img.color;
-                col.a -= dt;
-                img.color = col;
+                if (img.transform.name != "Flash") {
+                    Color col = img.color;
+                    col.a -= dt;
+                    img.color = col;
+                }
             }
 
             if (Canvas.GetComponentInChildren<Image>().color.a.Near(0)) {
@@ -61,9 +101,11 @@ public class MenuManager {
             Canvas.SetActive(true);
 
             foreach (Image img in Canvas.GetComponentsInChildren<Image>()) {
-                Color col = img.color;
-                col.a += dt;
-                img.color = col;
+                if (img.transform.name != "Flash") {
+                    Color col = img.color;
+                    col.a += dt;
+                    img.color = col;
+                }
             }
             if (Canvas.GetComponentInChildren<Image>().color.a >= 0.5) {
                 GoVisible = false;
@@ -81,6 +123,20 @@ public class MenuManager {
         }
     }
 
+    public void BeginTrans() {
+        GameLaunched = false;
+        Canvas.SetActive(true);
+        GoFlash = true;
+
+    }
+
+    public void OutOfTrans() {
+        Canvas.SetActive(true);
+        flasher.color = new Color(1, 1, 1, 1);
+
+        GoUnFlash = true;
+    }
+
     private void Pause() {
         TheGameManager.Instance.PauseGame();
         GoVisible = true;
@@ -96,7 +152,7 @@ public class MenuManager {
     private void Start() {
         TheGameManager.Instance.LaunchGame();
     }
-    private void Patch() {}
+
     private void Quit() {
         Application.Quit();
     }

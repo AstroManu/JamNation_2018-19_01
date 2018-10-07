@@ -1691,7 +1691,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118470900284372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.89759, y: 4.314, z: 0}
+  m_LocalPosition: {x: -5.5, y: -0.13406515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4234914003093282}
@@ -1800,15 +1800,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5919197cc090aac4e977b64125abce0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewiredPlayer: Player2
-  lateralForce: 10
-  airLateralForce: 2
-  maxLateralVelocity: 4
-  jumpImpulse: 3
-  gravityAcceleration: 10
-  maxVerticalVelocity: 1
-  upwardDampeningDelta: 1
-  jumpDampeningDelay: 0.3
+  rewiredPlayer: Player1
+  lateralForce: 12
+  airLateralForce: 12
+  maxLateralVelocity: 3
+  jumpImpulse: 3.8
+  gravityAcceleration: 4
+  maxVerticalVelocity: 2
+  upwardDampeningDelta: 2
+  jumpDampeningDelay: 1
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 36352
