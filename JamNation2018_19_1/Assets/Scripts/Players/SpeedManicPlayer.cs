@@ -35,7 +35,7 @@ public class SpeedManicPlayer : BasePlayer {
 
 	protected override void UpdateAnimation()
 	{
-		anim.SetBool("IsMoving", true);
+		anim.SetBool("IsMoving", !manicInput.Near(0));
 		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0 && true);
 	}
 }
