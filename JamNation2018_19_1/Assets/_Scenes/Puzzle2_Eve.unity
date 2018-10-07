@@ -209,7 +209,7 @@ MonoBehaviour:
   useOldInspector: 0
   featuresFoldout: 1
   showAdditionalSettings: 1
-  displayLightIntensity: 7
+  displayLightIntensity: 3
   displayAreaLightEmissiveMesh: 0
 --- !u!108 &26476575
 Light:
@@ -220,8 +220,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.9433962, g: 0.7333153, b: 0.28034887, a: 1}
-  m_Intensity: 7
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -574,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &287876616
 Transform:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 919916ed3e7f76c45be3c11b2f385a1f, type: 2}
+  sharedProfile: {fileID: 0}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -2396,17 +2396,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151081338}
-  - {fileID: 93678837}
-  - {fileID: 643185108}
   - {fileID: 1483208832}
+  - {fileID: 93678837}
   - {fileID: 1145819967}
+  - {fileID: 643185108}
+  - {fileID: 925042213}
   - {fileID: 1745512969}
+  - {fileID: 859332136}
   - {fileID: 990663532}
+  - {fileID: 803707491}
   - {fileID: 550528165}
   - {fileID: 150829762}
-  - {fileID: 859332136}
-  - {fileID: 925042213}
-  - {fileID: 803707491}
   m_Father: {fileID: 1478814024}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
