@@ -31,10 +31,14 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2
+    value: 27.01
   threshold:
     overrideState: 1
+<<<<<<< HEAD
+    value: 0.86
+=======
     value: 0.6
+>>>>>>> master
   softKnee:
     overrideState: 0
     value: 0.5
@@ -42,8 +46,8 @@ MonoBehaviour:
     overrideState: 0
     value: 65472
   diffusion:
-    overrideState: 0
-    value: 7
+    overrideState: 1
+    value: 3
   anamorphicRatio:
     overrideState: 0
     value: 0
