@@ -20,6 +20,12 @@ public class BasePlayer : MonoBehaviour {
 	public float jumpImpulse = 10f;
 	public float gravityAcceleration = 5f;
 
+	public float maxVerticalVelocity = 1f;
+	public float upwardDampeningDelta = 5f;
+	public float jumpDampeningDelay = 0.3f;
+
+	private float upwardDampeningDelay = 0f;
+
 	public LayerMask groundCheckMask;
 
 	protected Quaternion targetRotation;
@@ -43,6 +49,8 @@ public class BasePlayer : MonoBehaviour {
 
 	private void FixedUpdate ()
 	{
+		float fixedDeltaTime = Time.fixedDeltaTime;
+
 		bool groundCheck = groundCheckZone.GetHits(groundCheckMask).Length > 0;
 
 		ApplyLateralInput(groundCheck);
@@ -55,6 +63,14 @@ public class BasePlayer : MonoBehaviour {
 		}
 
 		ApplyGravityAcceleration();
+
+		upwardDampeningDelay = Mathf.MoveTowards(upwardDampeningDelay, 0f, fixedDeltaTime);
+		if (upwardDampeningDelay <= 0f && rb.velocity.y > maxVerticalVelocity)
+		{
+			Debug.Log("Dampening!");
+			rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
+		}
+
 	}
 
 	protected virtual void ApplyLateralInput(bool groundCheck)
@@ -88,6 +104,7 @@ public class BasePlayer : MonoBehaviour {
 		{
 			rb.velocity = new Vector3(rb.velocity.x, 0f, 0f);
 			rb.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
+			upwardDampeningDelay = jumpDampeningDelay;
 		}
 	}
 
