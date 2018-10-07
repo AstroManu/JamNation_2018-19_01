@@ -25,11 +25,12 @@ public class TheGameManager {
     public int WinnedPuzzle { get; private set; }
     public int CurrentPuzzle { get; private set; }
 
-   
+    private Timer NextPzlTimer;
 
     public void Init() {
         WinnedPuzzle = 0;
         CurrentPuzzle = 0;
+        NextPzlTimer = new Timer(.2f, StartNextPuzzle);
 
     }
 
@@ -64,10 +65,13 @@ public class TheGameManager {
     public void BeginNextPuzzle() {
         CurrentPuzzle++;
         MenuManager.Instance.BeginTrans();
+        TimerManager.Instance.AddTimer(this, NextPzlTimer);
+        
     }
 
     private void StartNextPuzzle() {
         SceneManager.Instance.LoadScene("Puzzle"+CurrentPuzzle);
     }
 
+    
 }
