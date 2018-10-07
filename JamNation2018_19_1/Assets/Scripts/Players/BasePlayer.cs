@@ -5,6 +5,8 @@ using Rewired;
 
 public class BasePlayer : MonoBehaviour {
 
+	[HideInInspector]public bool inputEnabled = true;
+
 	public string rewiredPlayer;
 	protected Player player;
 
@@ -30,6 +32,7 @@ public class BasePlayer : MonoBehaviour {
 	private float upwardDampeningDelay = 0f;
 
 	public LayerMask groundCheckMask;
+	public LayerMask pushCheckMask;
 
 	protected Quaternion targetRotation;
 
@@ -53,29 +56,31 @@ public class BasePlayer : MonoBehaviour {
 
 	private void FixedUpdate ()
 	{
-		float fixedDeltaTime = Time.fixedDeltaTime;
-
-		bool groundCheck = groundCheckZone.GetHits(groundCheckMask).Length > 0;
-
-		ApplyLateralInput(groundCheck);
-
-		RotatePlayerModel();
-
-		if (player.GetButtonDown("Jump"))
+		if (inputEnabled)
 		{
-			ApplyJumpForce(groundCheck);
+			float fixedDeltaTime = Time.fixedDeltaTime;
+
+			bool groundCheck = groundCheckZone.GetHits(groundCheckMask).Length > 0;
+
+			ApplyLateralInput(groundCheck);
+
+			RotatePlayerModel();
+
+			if (player.GetButtonDown("Jump"))
+			{
+				ApplyJumpForce(groundCheck);
+			}
+
+			ApplyGravityAcceleration();
+
+			upwardDampeningDelay = Mathf.MoveTowards(upwardDampeningDelay, 0f, fixedDeltaTime);
+			if (upwardDampeningDelay <= 0f && rb.velocity.y > maxVerticalVelocity)
+			{
+				rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
+			}
+
+			UpdateAnimation();
 		}
-
-		ApplyGravityAcceleration();
-
-		upwardDampeningDelay = Mathf.MoveTowards(upwardDampeningDelay, 0f, fixedDeltaTime);
-		if (upwardDampeningDelay <= 0f && rb.velocity.y > maxVerticalVelocity)
-		{
-			rb.velocity = new Vector3(rb.velocity.x, Mathf.MoveTowards(rb.velocity.y, maxVerticalVelocity, upwardDampeningDelta), 0f);
-		}
-
-		UpdateAnimation();
-
 	}
 
 	protected virtual void ApplyLateralInput(bool groundCheck)
@@ -124,7 +129,16 @@ public class BasePlayer : MonoBehaviour {
 
 	protected virtual void UpdateAnimation ()
 	{
-		anim.SetBool("IsMoving", rb.velocity.x > 0.05f || rb.velocity.x < -0.05f);
-		anim.SetBool("IsPushing", pushCheckZone.GetHits(groundCheckMask).Length > 0);
+		bool moveInput = !player.GetAxis("MoveHorizontal").Near(0f);
+
+		anim.SetBool("IsMoving", moveInput);
+		anim.SetBool("IsPushing", pushCheckZone.GetHits(pushCheckMask).Length > 0 && moveInput);
 	}
+
+    public void LaunchEndingAnimation() {
+        anim.SetTrigger("EndGame");
+        Debug.Log("Triger called");
+
+    }
+
 }

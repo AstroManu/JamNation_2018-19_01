@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4851441272251642}
   - component: {fileID: 65836102097500138}
+  - component: {fileID: 136045767863396730}
   - component: {fileID: 114339814876404032}
   - component: {fileID: 54856108159970788}
   - component: {fileID: 114979871097561282}
@@ -2354,8 +2355,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1117534719332800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 1.135, z: 0.716}
-  m_LocalScale: {x: 1, y: 1.51, z: -0.3}
+  m_LocalPosition: {x: -0.025, y: 0.92, z: 0.716}
+  m_LocalScale: {x: 1, y: 0.65, z: -0.3}
   m_Children: []
   m_Father: {fileID: 4002854737362472}
   m_RootOrder: 1
@@ -2590,8 +2591,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1121905522372562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 0.99, y: 0.13, z: 0.5}
+  m_LocalPosition: {x: -0.12, y: -0.1, z: 0}
+  m_LocalScale: {x: 0.26, y: 0.13, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4851441272251642}
   m_RootOrder: 1
@@ -3173,8 +3174,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.97, y: 0.44, z: 1}
+  m_Center: {x: 0, y: 1.42, z: 0}
 --- !u!95 &95400259439143380
 Animator:
   serializedVersion: 3
@@ -3209,14 +3210,17 @@ MonoBehaviour:
   lateralForce: 16
   airLateralForce: 3
   maxLateralVelocity: 1
-  jumpImpulse: 6
-  gravityAcceleration: 16
+  jumpImpulse: 7
+  gravityAcceleration: 18
   maxVerticalVelocity: 1.5
-  upwardDampeningDelta: 1
-  jumpDampeningDelay: 1
+  upwardDampeningDelta: 0.9
+  jumpDampeningDelay: 10
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 34304
+  pushCheckMask:
+    serializedVersion: 2
+    m_Bits: 1536
 --- !u!114 &114979871097561282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3239,6 +3243,19 @@ MonoBehaviour:
     shape: 0
     gizmoColor: {r: 0.06607044, g: 1, b: 0, a: 0.5019608}
     gizmo: 2
+--- !u!136 &136045767863396730
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168996413925996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.34
+  m_Height: 1.63
+  m_Direction: 1
+  m_Center: {x: -0.12, y: 0.82, z: 0}
 --- !u!137 &137553237581748058
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
