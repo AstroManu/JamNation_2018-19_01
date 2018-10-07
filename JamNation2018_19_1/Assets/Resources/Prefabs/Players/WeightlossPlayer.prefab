@@ -141,6 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948099697211828}
   - component: {fileID: 65929256154725582}
+  - component: {fileID: 136900638302561882}
   - component: {fileID: 114583008230324840}
   - component: {fileID: 54565798736358530}
   - component: {fileID: 114468485604006820}
@@ -1471,8 +1472,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663006259154906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 0.99, y: 0.13, z: 0.5}
+  m_LocalPosition: {x: 0, y: -0.09, z: 0}
+  m_LocalScale: {x: 0.09000002, y: 0.13, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4948099697211828}
   m_RootOrder: 1
@@ -1652,8 +1653,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871583220603920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.545, z: 0.716}
-  m_LocalScale: {x: 1, y: 0.75, z: -0.30000004}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0.3}
+  m_LocalScale: {x: 1, y: 0.57, z: -0.30000004}
   m_Children: []
   m_Father: {fileID: 4234914003093282}
   m_RootOrder: 1
@@ -1781,8 +1782,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 0.31, y: 0.27, z: 1}
+  m_Center: {x: -0.03, y: 0.86, z: 0}
 --- !u!95 &95287169821112852
 Animator:
   serializedVersion: 3
@@ -1842,14 +1843,27 @@ MonoBehaviour:
   jumpImpulse: 3.8
   gravityAcceleration: 4
   maxVerticalVelocity: 2
-  upwardDampeningDelta: 2
+  upwardDampeningDelta: 0.2
   jumpDampeningDelay: 1
   groundCheckMask:
     serializedVersion: 2
     m_Bits: 36352
   pushCheckMask:
     serializedVersion: 2
-    m_Bits: 3584
+    m_Bits: 1024
+--- !u!136 &136900638302561882
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118470900284372}
+  m_Material: {fileID: 13400000, guid: 79e182ced905f484a90f31c7894cf0e9, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.14
+  m_Height: 0.97
+  m_Direction: 1
+  m_Center: {x: -0.03, y: 0.48, z: 0}
 --- !u!137 &137238413876270302
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
