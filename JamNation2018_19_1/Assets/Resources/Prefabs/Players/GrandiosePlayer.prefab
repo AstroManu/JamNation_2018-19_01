@@ -1478,7 +1478,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085497094603906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.9, y: 2.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4049709740834628}
@@ -2205,7 +2205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918050337300962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.01, z: 1.321}
+  m_LocalPosition: {x: 0, y: 2.01, z: 1.25}
   m_LocalScale: {x: 1, y: 1.7, z: 0.52}
   m_Children: []
   m_Father: {fileID: 4049709740834628}
@@ -2797,8 +2797,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.93, y: 1, z: 1}
-  m_Center: {x: 0.06, y: 2.4, z: 0}
+  m_Size: {x: 1.42, y: 1, z: 1}
+  m_Center: {x: 0.24, y: 2.4, z: 0}
 --- !u!95 &95935957994591210
 Animator:
   serializedVersion: 3
@@ -2834,7 +2834,7 @@ MonoBehaviour:
   lateralForce: 17
   airLateralForce: 2.5
   maxLateralVelocity: 2
-  jumpImpulse: 7.5
+  jumpImpulse: 9
   gravityAcceleration: 11
   maxVerticalVelocity: 3.3
   upwardDampeningDelta: 1
