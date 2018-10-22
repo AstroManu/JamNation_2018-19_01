@@ -8,8 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: BrownMat
   m_Shader: {fileID: 4800000, guid: 450dc9fd6cc84744da2954cb5fd4113d, type: 3}
-  m_ShaderKeywords: _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING _ENABLE_FOG_ON_TRANSPARENT
-    _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -109,10 +108,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1F476523: 0.3
-    - Vector1_4EF352CF: 1
-    - Vector1_5FD25476: 1
-    - Vector1_FEDD0C95: 0.3
+    - Vector1_1F476523: 0
+    - Vector1_4EF352CF: -0.07
+    - Vector1_5FD25476: -0.1
+    - Vector1_FEDD0C95: 0.336
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -222,9 +221,9 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_256A7E9A: {r: 0.7394536, g: 0.7757592, b: 0.8207547, a: 1}
-    - Color_9800A7F6: {r: 0.7985904, g: 0, b: 2.828427, a: 1}
-    - Vector2_719451CD: {r: 1, g: 1, b: 0, a: 0}
+    - Color_256A7E9A: {r: 0.63403344, g: 0.82245845, b: 0.9811321, a: 1}
+    - Color_9800A7F6: {r: 1.2494292, g: 1.6126354, b: 2.7748952, a: 1}
+    - Vector2_719451CD: {r: 4, g: 3, b: 0, a: 0}
     - _BaseColor: {r: 0.6037736, g: 0.4244705, b: 0.35030258, a: 0.32156864}
     - _Color: {r: 0.6037736, g: 0.42447048, b: 0.35030255, a: 0.32156864}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
